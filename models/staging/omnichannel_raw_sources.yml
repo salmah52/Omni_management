@@ -1,0 +1,12 @@
+version: 2
+
+sources:
+  - name: omni_channel
+    database: OMNI_MANAGEMENT
+    schema: OM
+    tables:
+      - name: channels
+      - name: customers
+      - name: products
+      - name: visitHistory
+      - name: purchaseHistory
