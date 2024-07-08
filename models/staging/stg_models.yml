@@ -1,0 +1,89 @@
+version: 2
+
+models:
+  - name: stg_channels
+    description: "Staging model for channels"
+    columns:
+      - name: channel_id
+        description: "Unique identifier for the channel"
+        tests:
+          - not_null
+          - unique
+      - name: channel_name
+        description: "Name of the channel"
+      - name: created_at
+        description: "Timestamp when the channel was created"
+      - name: updated_at
+        description: "Timestamp when the channel was last updated"
+
+  - name: stg_customers
+    description: "Staging model for customers"
+    columns:
+      - name: customer_id
+        description: "Unique identifier for the customer"
+        tests:
+          - not_null
+          - unique
+      - name: name
+        description: "Name of the customer"
+      - name: date_birth
+        description: "Birthdate of the customer"
+      - name: email_address
+        description: "Email address of the customer"
+      - name: phone_number
+        description: "Phone number of the customer"
+      - name: country
+        description: "Country of the customer"
+      - name: created_at
+        description: "Timestamp when the customer was created"
+      - name: updated_at
+        description: "Timestamp when the customer was last updated"
+
+  - name: stg_products
+    description: "Staging model for products"
+    columns:
+      - name: product_sku
+        description: "Unique identifier for the product"
+        tests:
+          - not_null
+          - unique
+      - name: product_name
+        description: "Name of the product"
+      - name: unit_price
+        description: "Price of the product"
+      - name: created_at
+        description: "Timestamp when the product was created"
+      - name: updated_at
+        description: "Timestamp when the product was last updated"
+
+  - name: stg_purchase_history
+    description: "Staging model for purchase history"
+    columns:
+      - name: customer_id
+        description: "Unique identifier for the customer"
+      - name: product_sku
+        description: "Unique identifier for the product"
+      - name: channel_id
+        description: "Unique identifier for the channel"
+      - name: quantity
+        description: "Quantity of the product purchased"
+      - name: discount
+        description: "Discount applied to the purchase"
+      - name: order_date
+        description: "Date when the order was placed"
+
+  - name: stg_visit_history
+    description: "Staging model for visit history"
+    columns:
+      - name: customer_id
+        description: "Unique identifier for the customer"
+      - name: channel_id
+        description: "Unique identifier for the channel"
+      - name: visit_timestamp
+        description: "Timestamp of the visit"
+      - name: bounce_timestamp
+        description: "Timestamp when the visit ended"
+      - name: created_at
+        description: "Timestamp when the visit record was created"
+      - name: updated_at
+        description: "Timestamp when the visit record was last updated"

@@ -1,0 +1,72 @@
+version: 2
+
+models:
+  - name: dim_channels
+    description: "Dimension table for channels"
+    columns:
+      - name: sk_channel
+        description: "Surrogate key for the channel"
+        tests:
+          - unique
+          - not_null
+      - name: nk_channel_id
+        description: "Natural key identifier for the channel"
+        tests:
+          - unique
+          - not_null
+      - name: dsc_channel_name
+        description: "Name of the channel"
+      - name: dt_created_at
+        description: "Timestamp when the channel was created"
+      - name: dt_updated_at
+        description: "Timestamp when the channel was last updated"
+
+  - name: dim_customers
+    description: "Dimension table for customers"
+    columns:
+      - name: sk_customer
+        description: "Surrogate key for the customer"
+        tests:
+          - unique
+          - not_null
+      - name: nk_customer_id
+        description: "Natural key identifier for the customer"
+        tests:
+          - unique
+          - not_null
+      - name: dsc_name
+        description: "Name of the customer"
+      - name: dt_date_birth
+        description: "Date of birth of the customer"
+      - name: dsc_email_address
+        description: "Email address of the customer"
+      - name: dsc_phone_number
+        description: "Phone number of the customer"
+      - name: dsc_country
+        description: "Country of the customer"
+      - name: dt_created_at
+        description: "Timestamp when the customer was created"
+      - name: dt_updated_at
+        description: "Timestamp when the customer was last updated"
+
+  - name: dim_products
+    description: "Dimension table for products"
+    columns:
+      - name: sk_product
+        description: "Surrogate key for the product"
+        tests:
+          - unique
+          - not_null
+      - name: nk_product_sku
+        description: "Natural key identifier for the product"
+        tests:
+          - unique
+          - not_null
+      - name: dsc_product_name
+        description: "Name of the product"
+      - name: mtr_unit_price
+        description: "Unit price of the product"
+      - name: dt_created_at
+        description: "Timestamp when the product was created"
+      - name: dt_updated_at
+        description: "Timestamp when the product was last updated"
