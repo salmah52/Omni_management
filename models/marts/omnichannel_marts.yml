@@ -1,0 +1,68 @@
+version: 2
+
+models:
+  - name: fct_purchase_history
+    description: "Fact table for purchase history"
+    columns:
+      - name: sk_customer
+        description: "Surrogate key for the customer"
+        tests:
+          - unique
+          - not_null
+      - name: sk_channel
+        description: "Surrogate key for the channel"
+        tests:
+          - unique
+          - not_null
+      - name: sk_product
+        description: "Surrogate key for the product"
+        tests:
+          - unique
+          - not_null
+      - name: sk_order_date
+        description: "Surrogate key for the order date"
+        tests:
+          - not_null
+      - name: mtr_quantity
+        description: "Quantity of products purchased"
+      - name: mtr_discount
+        description: "Discount applied to the purchase"
+      - name: mtr_unit_price
+        description: "Unit price of the product"
+      - name: mtr_total_amount_gross
+        description: "Total amount before discounts"
+      - name: mtr_total_amount_net
+        description: "Total amount after discounts"
+
+  - name: fct_visit_history
+    description: "Fact table for visit history"
+    columns:
+      - name: sk_customer
+        description: "Surrogate key for the customer"
+        tests:
+          - unique
+          - not_null
+      - name: sk_channel
+        description: "Surrogate key for the channel"
+        tests:
+          - unique
+          - not_null
+      - name: sk_date_visit
+        description: "Surrogate key for the visit date"
+        tests:
+          - not_null
+      - name: sk_date_bounce
+        description: "Surrogate key for the bounce date"
+        tests:
+          - not_null
+      - name: dt_visit_timestamp
+        description: "Timestamp of the visit"
+        tests:
+          - not_null
+      - name: dt_bounce_timestamp
+        description: "Timestamp of the bounce"
+        tests:
+          - not_null
+      - name: mtr_length_of_stay_minutes
+        description: "Length of stay in minutes"
+

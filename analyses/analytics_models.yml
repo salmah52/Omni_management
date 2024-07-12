@@ -1,0 +1,54 @@
+version: 2
+
+models:
+
+  - name: analytic_sum_total_amount_with_discount
+    description: |
+      Calculate the sum of total amounts with discounts by year and quarter.
+    columns:
+      - name: year_number
+        description: Year extracted from order date.
+      - name: quarter_of_year
+        description: Quarter extracted from order date.
+      - name: sum_total_amount_with_discount
+        description: Sum of total amount with discounts rounded to 2 decimal places.
+    
+  - name: analytic_avg_length_of_stay_minutes
+    description: |
+      Calculate the average length of stay in minutes by channel.
+    columns:
+      - name: dsc_channel_name
+        description: Name of the channel.
+      - name: avg_length_of_stay_minutes
+        description: Average length of stay rounded to 2 decimal places.
+ 
+  - name: analytic_top_products_by_channel
+    description: |
+      Calculate the top 3 products by total amount spent per channel.
+    columns:
+      - name: dsc_channel_name
+        description: Name of the channel.
+      - name: dsc_product_name
+        description: Name of the product.
+      - name: sum_total_amount
+        description: Sum of total amount spent on the product rounded to 2 decimal places.
+      - name: rank_total_amount
+        description: Rank of the total amount spent among products within each channel.
+    
+              base_cte.dsc_product_name,
+              base_cte.dsc_channel_name,
+        
+
+  - name: analytic_top_customers_by_channel
+    description: |
+      Calculate the top 3 customers by total amount spent on 'Mobile App' channel.
+    columns:
+      - name: dsc_name
+        description: Name of the customer.
+      - name: dsc_email_address
+        description: Email address of the customer.
+      - name: dsc_channel_name
+        description: Name of the channel ('Mobile App').
+      - name: sum_total_amount
+        description: Sum of total amount spent by the customer rounded to 2 decimal places.
+    

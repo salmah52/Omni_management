@@ -2,10 +2,10 @@ WITH base_cte AS (
     SELECT dp.dsc_product_name,
            dc.dsc_channel_name,
            ROUND(SUM(fct.mtr_total_amount_net),2) as sum_total_amount
-    FROM `omnichannel_analytics`.`fct_purchase_history` fct
-    LEFT JOIN `omnichannel_analytics`.`dim_products` dp
+    FROM omni_channel.fct_purchase_history fct
+    LEFT JOIN omni_channel.dim_products dp
                                     on dp.sk_product = fct.sk_product
-    LEFT JOIN `omnichannel_analytics`.`dim_channels` dc
+    LEFT JOIN omni_channel.dim_channels dc
                                     on dc.sk_channel = fct.sk_channel
     GROUP BY dc.dsc_channel_name, dp.dsc_product_name
 ),
