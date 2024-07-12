@@ -12,8 +12,8 @@ A robust data architecture is crucial for ensuring data quality, integrity, and 
 ![Data Architecture](https://github.com/user-attachments/assets/5a04d209-ad60-4565-bc3a-e5c7a2a3d5a5)
 
 
-![Data Architecture](https://github.com/salmah52/project01-zoomcamp/assets/44398948/a85050dd-3f5d-4cc9-a865-073e24631246)
-Project Structure
+## Project Structure
+
 The project is structured into three main phases:
 
 - Data Extraction: Using Airbyte to move raw data from a PostgreSQL database to a Snowflake database.
