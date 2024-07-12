@@ -1,9 +1,15 @@
 
+## Welcome to the Omni Channel Data Pipeline Project!
 
-Welcome to the Omni Channel Data Pipeline Project!
-Project Overview
+## Project Overview
 
 This project aims to build a robust data pipeline that efficiently handles the extraction, transformation, and visualization of data. The pipeline moves raw data from a PostgreSQL database to a Snowflake database using Airbyte, transforms the data using dbt (data build tool), and finally visualizes the transformed data using PowerBI. This setup ensures a streamlined data flow from the source to insightful business intelligence dashboards.
+
+## Data Architecture
+
+A robust data architecture is crucial for ensuring data quality, integrity, and accessibility. Here's the architecture for my projects:
+<img width="697" alt="image" src="https://github.com/user-attachments/assets/8634061e-9ded-4def-a1b1-5d98d74ba48a">
+
 
 Project Structure
 The project is structured into three main phases:
