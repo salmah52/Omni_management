@@ -8,7 +8,9 @@ This project aims to build a robust data pipeline that efficiently handles the e
 ## Data Architecture
 
 A robust data architecture is crucial for ensuring data quality, integrity, and accessibility. Here's the architecture for my projects:
-<img width="697" alt="image" src="https://github.com/user-attachments/assets/8634061e-9ded-4def-a1b1-5d98d74ba48a">
+
+<img width="626" alt="image" src="https://github.com/user-attachments/assets/5a04d209-ad60-4565-bc3a-e5c7a2a3d5a5">
+
 
 
 Project Structure
